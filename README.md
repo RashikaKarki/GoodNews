@@ -66,10 +66,7 @@ pip install -r requirements.txt
 ## Usage
 
 
-Create a .env file using the example.env template
-
-
-Start flask development server
+Start flask server
 ```bash
 $ export FLASK_APP=main.py
 $ flask run
