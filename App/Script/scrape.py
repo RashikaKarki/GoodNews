@@ -4,7 +4,7 @@ from Script.preprocess_data import clean_data
 from Script.train import train_using_logistic_regression
 
 def get_data():
-    urls = ["https://risingnepaldaily.com/main-news", "https://risingnepaldaily.com/nation", "https://risingnepaldaily.com/health"]
+    urls = ["https://risingnepaldaily.com/main-news"]
     driver = set_up_driver()
     headlines = []
     for url in urls:
@@ -13,6 +13,7 @@ def get_data():
         for i in headlines_tag:
             headlines.append(i.text)
     driver.close()
+    #headlines = ["Be a better ancestor: five ways to be good to future generations", "A ‘forest’ has sprung up in an unlikely location in London", "Chop and change: the company recycling chopsticks into beautiful homewares", "Timber’s time: wood is making a comeback in construction, bringing many benefits"]
     print("Cleaning Data...")
     data = clean_data(headlines)
     print("Predicting...")
@@ -34,5 +35,3 @@ def set_up_driver():
     options.add_experimental_option('excludeSwitches', ['enable-logging'])
     driver = webdriver.Chrome(ChromeDriverManager().install(), options=options)
     return driver
-
-get_data()
