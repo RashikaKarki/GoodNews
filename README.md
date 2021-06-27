@@ -71,3 +71,23 @@ Start flask server
 $ export FLASK_APP=main.py
 $ flask run
 ```
+
+## How to call the Flask API?
+
+### Get Data
+
+- **API Call:** `http://127.0.0.1:5000/get_data` 
+- **Request Method:** get
+- **Returns:** JSON
+```javascript
+
+    {
+    "Meeting Of Organising Committee Of CPN-UML 10th General Convention On June 30": "Negative",
+    "Nepal In Desperate Need Of Life-Saving Vaccines": "Positive",
+    "Nepal’S Foreign Policy Has Taken Concrete Shape, Says PM": "Positive",
+    "PM Instructs For Prompt Disaster Response, Relief": "Negative"
+    }
+
+```
+
+![image](https://user-images.githubusercontent.com/41114269/123552333-620c3c00-d795-11eb-8f04-172121321203.png)
